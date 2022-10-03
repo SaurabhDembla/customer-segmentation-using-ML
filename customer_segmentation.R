@@ -113,6 +113,11 @@ library(factoextra)
 
 fviz_nbclust(customer_data[,3:5], kmeans, method = "silhouette")
 
+set.seed(125)
+stat_gap <- clusGap(customer_data[,3:5], FUN = kmeans, nstart = 25,
+                    K.max = 10, B = 50)
+fviz_gap_stat(stat_gap)
+
 k6<-kmeans(customer_data[,3:5],6,iter.max=100,nstart=50,algorithm="Lloyd")
 k6
 
