@@ -140,3 +140,11 @@ ggplot(customer_data, aes(x =Spending.Score..1.100., y =Age)) +
                        breaks=c("1", "2", "3", "4", "5","6"),
                        labels=c("Cluster 1", "Cluster 2", "Cluster 3", "Cluster 4", "Cluster 5","Cluster 6")) +
   ggtitle("Segments of Mall Customers", subtitle = "Using K-means Clustering")
+
+kCols=function(vec){cols=rainbow (length (unique (vec)))
+return (cols[as.numeric(as.factor(vec))])}
+
+digCluster<-k6$cluster; dignm<-as.character(digCluster); # K-means clusters
+
+plot(pcclust$x[,1:2], col =kCols(digCluster),pch =19,xlab ="K-means",ylab="classes")
+legend("bottomleft",unique(dignm),fill=unique(kCols(digCluster)))
