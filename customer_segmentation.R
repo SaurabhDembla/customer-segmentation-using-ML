@@ -141,6 +141,7 @@ ggplot(customer_data, aes(x =Spending.Score..1.100., y =Age)) +
                        labels=c("Cluster 1", "Cluster 2", "Cluster 3", "Cluster 4", "Cluster 5","Cluster 6")) +
   ggtitle("Segments of Mall Customers", subtitle = "Using K-means Clustering")
 
+#Final Cluster
 kCols=function(vec){cols=rainbow (length (unique (vec)))
 return (cols[as.numeric(as.factor(vec))])}
 
