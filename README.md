@@ -6,12 +6,6 @@
 
 #### Setup:
 
-1. You will need to have `numpy`, `pandas`, `seaborn`, and `matplotlib`.
+1. You will need to have `plotrix`, `NbClust` and `factoextra`.
 
 2. The data set is from Kaggle and can be downloaded from this repo.
-
-#### That is all, I hope you enjoy!
-
-My other projects can be found at my [GitHub](https://github.com/rileypredum).
-
-I also write about them on [Medium](https://medium.com/@rileypredum).
